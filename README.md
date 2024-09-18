@@ -15,7 +15,7 @@ Check out the live version of the project: [Demo Link](https://b0llull0s.github.
 - **Mouse Hover Effect**: The grid squares change color when the mouse hovers over them, simulating drawing.
 - **Random Colors & Darkening**: Each square gets a random color when hovered, and with each pass of the mouse, the color progressively darkens until fully black.
 - **Grid Border Toggle**: A checkbox allows users to enable or disable the borders around each grid square for a cleaner or more structured look.
-
+- **Right click saving**: Just right click and you will be able to save your draws; only works within the frame. 
 ## How to Use
 
 1. Hover over the grid to start drawing.
