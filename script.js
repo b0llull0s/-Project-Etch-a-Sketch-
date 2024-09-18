@@ -1,6 +1,6 @@
-// script.js
 const container = document.querySelector('.container');
 const resetButton = document.querySelector('#resetButton');
+const borderToggle = document.querySelector('#borderToggle'); // Get the checkbox element
 let gridSize = 16; // Default grid size
 
 // Random RGB color generator
@@ -41,6 +41,17 @@ function createGrid(size) {
 
         container.appendChild(square);
     }
+
+    // Check the checkbox status to toggle borders
+    toggleBorders(borderToggle.checked);
+}
+
+// Function to toggle borders on or off
+function toggleBorders(showBorders) {
+    const squares = document.querySelectorAll('.grid-square');
+    squares.forEach(square => {
+        square.style.border = showBorders ? '1px solid #ddd' : 'none'; // Toggle border
+    });
 }
 
 // Reset the grid based on user input
@@ -51,6 +62,11 @@ resetButton.addEventListener('click', () => {
         gridSize = newSize;
         createGrid(gridSize);
     }
+});
+
+// Listen for checkbox changes to toggle borders dynamically
+borderToggle.addEventListener('change', (e) => {
+    toggleBorders(e.target.checked);
 });
 
 // Initialize the grid

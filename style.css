@@ -15,17 +15,28 @@ body {
 
 .grid-square {
     box-sizing: border-box;
-    /* You can either remove the border or use outline as mentioned */
-    /*border: 1px solid #ddd;
+    border: 1px solid #ddd;
     outline: 1px solid transparent; /* No outline initially */
 }
 
 .grid-square:hover {
-    outline: 1px solid #ddd; /* Add outline only on hover for visual feedback */
+    outline: 1px solid #000000; /* Add outline only on hover for visual feedback */
+}
+
+/* Controls container for button and checkbox */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px; /* Space between label and checkbox */
 }
 
 button {
-    margin-bottom: 20px;
+    margin-left: 10px; /* Space between checkbox and reset button */
     padding: 10px 20px;
     cursor: pointer;
 }
