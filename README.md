@@ -35,9 +35,3 @@ git clone https://github.com/yourusername/etch-a-sketch.git
 cd etch-a-sketch
 ```
 3. Open index.html in your preferred browser.
-
-## Technologies Used
-
-- **HTML**: For structuring the webpage.
-- **CSS**: For styling, including Flexbox for layout.
-- **JavaScript**: For DOM manipulation, grid generation, and event handling.
