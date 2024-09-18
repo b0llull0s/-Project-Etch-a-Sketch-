@@ -1,0 +1,25 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 960px;
+    margin: 20px auto;
+    border: 2px solid #000;
+}
+
+.grid-square {
+    flex: 1 0 auto;
+    border: 1px solid #ddd;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
