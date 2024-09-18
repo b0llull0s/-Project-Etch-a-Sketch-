@@ -12,9 +12,9 @@ Check out the live version of the project: [Demo Link](https://b0llull0s.github.
 
 - **16x16 Grid**: A 16x16 grid of square divs is generated on page load.
 - **Dynamic Grid Size**: Users can change the grid size up to 100x100 squares by clicking the **Reset** button and entering a new size.
-- **Mouse Hover Effect**: The grid squares change color when the mouse hovers over them, simulating drawing.
-- **Random Colors & Darkening**: Each square gets a random color when hovered, and with each pass of the mouse, the color progressively darkens until fully black.
-- **Grid Border Toggle**: A checkbox allows users to enable or disable the borders around each grid square for a cleaner or more structured look.
+- **Mouse Hover Effect**: The grid squares change color randomly when the mouse hovers over them, simulating drawing.
+- **Progressive Darkening**: With each pass of the mouse, the color progressively darkens until fully black.
+- **Grid Border Toggle**: A checkbox allows users to enable or disable the grid borders.
 - **Right click saving**: Just right click and you will be able to save your draws; only works within the frame. 
 ## How to Use
 
