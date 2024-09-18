@@ -3,33 +3,39 @@ const container = document.querySelector('.container');
 const resetButton = document.querySelector('#resetButton');
 let gridSize = 16; // Default grid size
 
+// Random RGB color generator
 function randomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
+    return { r, g, b };
+}
+
+// Function to progressively darken a color
+function darkenColor(rgb, factor) {
+    const r = Math.floor(rgb.r * (1 - factor));
+    const g = Math.floor(rgb.g * (1 - factor));
+    const b = Math.floor(rgb.b * (1 - factor));
     return `rgb(${r}, ${g}, ${b})`;
 }
 
 function createGrid(size) {
     container.innerHTML = ''; // Clear the container
 
-    const squareSize = 960 / size; // Set the square size to maintain the container size
+    const squareSize = (960 / size) - 2; // Subtract 2px for borders
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement('div');
         square.classList.add('grid-square');
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
-        square.dataset.opacity = 0; // Initialize opacity
+        let rgbColor = randomColor(); // Initial random color
+        let darkenFactor = 0; // Initialize darkening factor
 
-        // Add hover effect for random color
+        // Add hover effect for random color darkening
         square.addEventListener('mouseenter', () => {
-            let currentOpacity = parseFloat(square.dataset.opacity);
-            if (currentOpacity < 1) {
-                currentOpacity += 0.1;
-                square.dataset.opacity = currentOpacity;
-                square.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity})`; // Progressive darkening effect
-            } else {
-                square.style.backgroundColor = randomColor(); // Random color on subsequent interactions
+            if (darkenFactor < 1) {
+                darkenFactor += 0.1;
+                square.style.backgroundColor = darkenColor(rgbColor, darkenFactor);
             }
         });
 
@@ -49,4 +55,3 @@ resetButton.addEventListener('click', () => {
 
 // Initialize the grid
 createGrid(gridSize);
-
