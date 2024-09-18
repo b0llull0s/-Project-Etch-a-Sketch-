@@ -1,8 +1,7 @@
 # Project: Etch-a-Sketch
-
-This project is part of [The Odin Project](https://www.theodinproject.com/)'s Foundations course.<br>
-It aims to replicate an "Etch-a-Sketch" toy where users can draw on a grid with their mouse, changing the color of grid squares as they hover over them.<br>
-The project focuses on JavaScript, DOM manipulation, and CSS layout using Flexbox.
+- This project is part of [The Odin Project](https://www.theodinproject.com/)'s Foundations course.
+- It aims to replicate an "Etch-a-Sketch" toy where users can draw on a grid with their mouse, changing the color of grid squares as they hover over them.
+- The project focuses on JavaScript, DOM manipulation, and CSS layout using Flexbox.
 
 ## Demo
 
