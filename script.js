@@ -1,6 +1,8 @@
 const container = document.querySelector('.container');
 const resetButton = document.querySelector('#resetButton');
 const borderToggle = document.querySelector('#borderToggle'); // Get the checkbox element
+const customContextMenu = document.getElementById('customContextMenu');
+const saveDrawingOption = document.getElementById('saveDrawing');
 let gridSize = 16; // Default grid size
 
 // Random RGB color generator
@@ -71,3 +73,47 @@ borderToggle.addEventListener('change', (e) => {
 
 // Initialize the grid
 createGrid(gridSize);
+
+// Prevent the default right-click menu
+container.addEventListener('contextmenu', function (e) {
+    e.preventDefault();  
+    customContextMenu.style.display = 'block';
+    customContextMenu.style.left = `${e.pageX}px`;
+    customContextMenu.style.top = `${e.pageY}px`;
+});
+
+// Hide custom context menu if clicking elsewhere
+document.addEventListener('click', function () {
+    customContextMenu.style.display = 'none';
+});
+
+// Save drawing when clicking the 'Save Drawing' option
+saveDrawingOption.addEventListener('click', function () {
+    customContextMenu.style.display = 'none'; // Hide menu after clicking
+
+    // Create a canvas and draw the current grid state on it
+    const canvas = document.createElement('canvas');
+    const gridSquares = document.querySelectorAll('.grid-square');
+    const gridSize = Math.sqrt(gridSquares.length);  // Assuming the grid is a square
+    const squareSize = container.offsetWidth / gridSize;  // Calculate size of each square
+
+    // Set canvas size to match the container
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+    const ctx = canvas.getContext('2d');
+
+    // Loop over all grid squares and draw their background colors onto the canvas
+    gridSquares.forEach((square, index) => {
+        const row = Math.floor(index / gridSize);
+        const col = index % gridSize;
+        const color = window.getComputedStyle(square).backgroundColor;
+        ctx.fillStyle = color;
+        ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+    });
+
+    // Convert canvas to image and trigger download
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = 'etch-a-sketch-drawing.png';
+    link.click();
+});
