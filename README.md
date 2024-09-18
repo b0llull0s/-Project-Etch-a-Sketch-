@@ -34,3 +34,8 @@ git clone https://github.com/yourusername/etch-a-sketch.git
 cd etch-a-sketch
 ```
 3. Open index.html in your preferred browser.
+
+## Upcoming Features
+- Grid toggling shortcut
+- Save Session
+- Arrow-key inputs
