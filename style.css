@@ -15,7 +15,7 @@ body {
 
 .grid-square {
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd66;
     outline: 1px solid transparent; /* No outline initially */
 }
 
