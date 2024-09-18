@@ -1,6 +1,8 @@
 # Project: Etch-a-Sketch
 
-This project is part of [The Odin Project](https://www.theodinproject.com/)'s Foundations course. It aims to replicate an "Etch-a-Sketch" toy where users can draw on a grid with their mouse, changing the color of grid squares as they hover over them. The project focuses on JavaScript, DOM manipulation, and CSS layout using Flexbox.
+This project is part of [The Odin Project](https://www.theodinproject.com/)'s Foundations course.<br>
+It aims to replicate an "Etch-a-Sketch" toy where users can draw on a grid with their mouse, changing the color of grid squares as they hover over them.<br>
+The project focuses on JavaScript, DOM manipulation, and CSS layout using Flexbox.
 
 ## Demo
 
@@ -25,8 +27,9 @@ Check out the live version of the project: [Demo Link](https://b0llull0s.github.
 To run the project locally:
 
 1. Clone this repository to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/etch-a-sketch.git
+```bash
+git clone https://github.com/yourusername/etch-a-sketch.git
+```
 2. Navigate to the project directory:
 ```bash
 cd etch-a-sketch
