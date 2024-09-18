@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #000000;
+    background-color: #0b0b0b;
 }
 
 .container {
@@ -11,7 +11,7 @@ body {
     width: 960px;
     height: 960px;
     margin: 20px auto;
-    border: 2px solid #6f00ff;
+    border: 2px solid white;
 }
 
 .grid-square {
@@ -21,7 +21,7 @@ body {
 }
 
 .grid-square:hover {
-    outline: 1px solid #000000; /* Add outline only on hover for visual feedback */
+    outline: 1px solid white; /* Add outline only on hover for visual feedback */
 }
 
 /* Controls container for button and checkbox */
