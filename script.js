@@ -22,7 +22,7 @@ function darkenColor(rgb, factor) {
 function createGrid(size) {
     container.innerHTML = ''; // Clear the container
 
-    const squareSize = 960 / size; // No need to subtract for borders
+    const squareSize = 960 / size; 
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement('div');
         square.classList.add('grid-square');
